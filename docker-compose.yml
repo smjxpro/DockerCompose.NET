@@ -21,7 +21,7 @@ services:
   webapi:
     build:
       context: .
-      dockerfile: ./WebAPI/Dockerfile
+      dockerfile: ./WebApi/Dockerfile
     ports:
       - "8082:80"
     depends_on:
@@ -39,11 +39,10 @@ services:
       - db_data:/var/lib/postgresql/data
       - ./DbScripts:/scripts
     environment:
-      POSTGRES_USER: "${POSTGRES_USER}"
-      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
-      POSTGRES_DB: "${POSTGRES_DB}"
-#    command:
-#      - psql -U "${POSTGRES_USER}" -d "${POSTGRES_DB}" -a -f scripts/migration.sql
+      POSTGRES_USER: "${DB_USERNAME}"
+      POSTGRES_PASSWORD: "${DB_PASSWORD}"
+      POSTGRES_DB: "${DB_DATABASE}"
+
     networks: 
       - todo_network
     restart: always
