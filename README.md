@@ -6,7 +6,7 @@ Example ASP.NET Core project with PostgresQL database demonstrating deployment t
 1. Clone the repo to your development machine
 2. Make necessary changes to `docker-compose.yml` and `.env` files
 3. Create *EntityFramework* migrations: `dotnet ef migrations add MigrationName`
-4. Generate *sql* file for the migration: `➜ dotnet ef migrations script -s ./WebApp -p ./Infrastructure -o ./DbScripts/migration.sql`
+4. Generate *sql* file for the migration: `dotnet ef migrations script -s ./WebApp -p ./Infrastructure -o ./DbScripts/migration.sql`
 5. Commit & push
 6. Clone the repo to your server
 7. cd into the project then: `source .env`
