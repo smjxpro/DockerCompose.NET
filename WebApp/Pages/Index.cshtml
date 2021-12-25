@@ -5,6 +5,30 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Todo</h1>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Is Complete</th>
+        </tr>
+        </thead>
+        <tbody>
+        @for (var i = 0; i < Model.Todos.Count; i++)
+        {
+            var todo = Model.Todos[i];
+            <tr>
+                <th scope="row">@(i + 1)</th>
+                <td>@todo.Name</td>
+                <td>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="@todo.Id" checked="@todo.IsComplete" onchange="@{ Model.OnChane(todo.Id); }">
+                        @* <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label> *@
+                    </div>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
 </div>
