@@ -14,7 +14,7 @@ CREATE TABLE "Todos" (
 );
 
 INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
-VALUES ('20211225061451_Initial', '6.0.0');
+VALUES ('20211225061451_Initial', '6.0.1');
 
 COMMIT;
 
