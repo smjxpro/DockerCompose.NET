@@ -11,7 +11,8 @@ services:
     depends_on: 
       - postgres
     environment:
-      DB_CONNECTION_STRING: "host=${DB_HOST:-todo_postgres};port=${DB_PORT:5432};database=${DB_DATABASE:-todo};username=${DB_USERNAME:-todo};password=${DB_PASSWORD:-todo};"
+      ASPNETCORE_ENVIRONMENT: ${ASPNETCORE_ENVIRONMENT:-Production}
+      DB_CONNECTION_STRING: "host=${DB_HOST:-todo_postgres};port=${DB_PORT:-5432};database=${DB_DATABASE:-todo};username=${DB_USERNAME:-todo};password=${DB_PASSWORD:-todo};"
     networks: 
       - todo_net
     restart: unless-stopped  
@@ -26,7 +27,8 @@ services:
     depends_on:
       - postgres
     environment:
-      DB_CONNECTION_STRING: "host=${DB_HOST:-todo_postgres};port=${DB_PORT:5432};database=${DB_DATABASE:-todo};username=${DB_USERNAME:-todo};password=${DB_PASSWORD:-todo};"
+      ASPNETCORE_ENVIRONMENT: ${ASPNETCORE_ENVIRONMENT:-Production}
+      DB_CONNECTION_STRING: "host=${DB_HOST:-todo_postgres};port=${DB_PORT:-5432};database=${DB_DATABASE:-todo};username=${DB_USERNAME:-todo};password=${DB_PASSWORD:-todo};"
     networks:
       - todo_net
     restart: unless-stopped
@@ -54,4 +56,3 @@ networks:
 
 volumes:
   postgres:
-  pgadmin:
