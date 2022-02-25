@@ -1,13 +1,30 @@
 using Infrastructure.Extensions;
 
+var  MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+        builder =>
+        {
+            // builder.WithOrigins("http://example.com",
+            //     "http://www.contoso.com");
+
+            builder.AllowAnyMethod();
+            builder.AllowAnyOrigin();
+        });
+});
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
 if (builder.Environment.IsDevelopment())
 {
     builder.Services.AddDevInfrastructure(builder.Configuration);
@@ -15,7 +32,9 @@ if (builder.Environment.IsDevelopment())
 else
 {
     builder.Services.AddProdInfrastructure();
-}var app = builder.Build();
+}
+
+var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -25,6 +44,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors(MyAllowSpecificOrigins);
 
 app.UseAuthorization();
 
