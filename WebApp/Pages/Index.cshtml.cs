@@ -1,6 +1,7 @@
-﻿using Domain.Entities;
+﻿using Application.Queries;
+using Domain.Entities;
 using Domain.Repositories;
-using Microsoft.AspNetCore.Mvc;
+using MediatR;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace WebApp.Pages;
@@ -8,21 +9,22 @@ namespace WebApp.Pages;
 public class IndexModel : PageModel
 {
     private readonly ILogger<IndexModel> _logger;
-    private readonly ITodoRepository _todoRepository;
+    private readonly IMediator _mediator;
 
-    public IndexModel(ILogger<IndexModel> logger, ITodoRepository todoRepository)
+    public IndexModel(ILogger<IndexModel> logger, IMediator mediator)
     {
         _logger = logger;
-        _todoRepository = todoRepository;
+        _mediator = mediator;
     }
 
     public IList<Todo> Todos { get; set; } = new List<Todo>();
+
     public async Task OnGetAsync()
     {
-        Todos = (await _todoRepository.GetAllTodo()).ToList();
+        Todos = (await _mediator.Send(new GetAllTodoQuery())).ToList();
     }
 
-    public void OnChane(Guid id)
+    public void OnChange(Guid id)
     {
         Console.WriteLine(id);
     }

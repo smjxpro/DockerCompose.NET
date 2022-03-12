@@ -12,10 +12,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96f4d98a-269d-4d2a-92c8-e5d75e47c652" name="Changes" comment="added documentation">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DockerCompose.NET/.idea/.name" beforeDir="false" />
+    <list default="true" id="96f4d98a-269d-4d2a-92c8-e5d75e47c652" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Application/Application.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Commands/CreateTodoCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Commands/DeleteTodoCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Commands/UpdateTodoCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Handlers/CreateTodoCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Handlers/DeleteTodoCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Handlers/GetAllTodoQueryHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Handlers/GetTodoByIdQueryHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Handlers/UpdateTodoCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Queries/GetAllTodoQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Queries/GetTodoByIdQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/Entities/BaseEntity.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/Repositories/IRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/Repositories/IUnitOfWork.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Infrastructure/Repositories/Repository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Infrastructure/Repositories/UnitOfWork.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DockerCompose.NET/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DockerCompose.NET/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DockerCompose.NET.sln" beforeDir="false" afterPath="$PROJECT_DIR$/DockerCompose.NET.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Entities/Todo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Entities/Todo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Repositories/ITodoRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Repositories/ITodoRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Extensions/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Extensions/DependencyInjection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Repositories/TodoRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Repositories/TodoRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApi/Controllers/TodoController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/Controllers/TodoController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApi/WebApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/WebApi.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/Pages/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Pages/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/Pages/Index.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Pages/Index.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/WebApp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/WebApp.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +57,7 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/26259b0a3c4b474b9f081864810b4654ba00/82/1f374e93/IRequestHandler`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Domain/Entities/Todo.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -189,7 +216,8 @@
       <workItem from="1640410467885" duration="9069000" />
       <workItem from="1640419600841" duration="3315000" />
       <workItem from="1640441346727" duration="10494000" />
-      <workItem from="1645822210614" duration="1532000" />
+      <workItem from="1645822210614" duration="1994000" />
+      <workItem from="1647119548690" duration="5436000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1637692358527</created>
@@ -226,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640443412967</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added cors">
+      <created>1645823834237</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1645823834237</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,6 +292,7 @@
     <MESSAGE value="added infrastructure" />
     <MESSAGE value="added docker compose" />
     <MESSAGE value="added documentation" />
-    <option name="LAST_COMMIT_MESSAGE" value="added documentation" />
+    <MESSAGE value="added cors" />
+    <option name="LAST_COMMIT_MESSAGE" value="added cors" />
   </component>
 </project>

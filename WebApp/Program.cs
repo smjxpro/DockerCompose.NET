@@ -1,9 +1,14 @@
+using Application.Handlers;
 using Infrastructure.Extensions;
+using MediatR;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+builder.Services.AddMediatR(typeof(GetAllTodoQueryHandler));
+
 
 if (builder.Environment.IsDevelopment())
 {

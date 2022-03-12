@@ -13,12 +13,10 @@ public static class DependencyInjection
     {
         var connectionString = Environment.GetEnvironmentVariable("DB_CONNECTION_STRING");
         
-        Console.WriteLine($"connection: {connectionString}");
-
         services.AddDbContext<TodoDbContext>(options => { options.UseNpgsql(connectionString); });
 
 
-        services.AddScoped<ITodoRepository, TodoRepository>();
+        services.AddScoped<IUnitOfWork, UnitOfWork>();
 
         return services;
     }
@@ -33,7 +31,7 @@ public static class DependencyInjection
         });
 
 
-        services.AddScoped<ITodoRepository, TodoRepository>();
+        services.AddScoped<IUnitOfWork, UnitOfWork>();
 
         return services;
     }
