@@ -19,11 +19,11 @@ services:
       - todo_net
     restart: unless-stopped
   
-  webapi:
-    container_name: todo_webapi
+  webapp:
+    container_name: todo_webapp
     build:
       context: .
-      dockerfile: ./WebApi/Dockerfile
+      dockerfile: ./WebApp/Dockerfile
     ports:
       - "8001:80"
     depends_on:
@@ -35,11 +35,11 @@ services:
       - todo_net
     restart: unless-stopped
   
-  webapp:
-    container_name: todo_webapp
+  webapi:
+    container_name: todo_webapi
     build:
       context: .
-      dockerfile: ./WebApp/Dockerfile
+      dockerfile: ./WebApi/Dockerfile
     ports:
       - "8002:80"
     depends_on:
@@ -50,7 +50,6 @@ services:
     networks:
       - todo_net
     restart: unless-stopped
-  
   
   pgadmin:
     container_name: todo_pgadmin

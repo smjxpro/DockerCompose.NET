@@ -13,10 +13,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="96f4d98a-269d-4d2a-92c8-e5d75e47c652" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DockerCompose.NET/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DockerCompose.NET/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Entities/BaseEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Entities/BaseEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Entities/Todo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Entities/Todo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApi/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/appsettings.Development.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose-dev.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose-prod.yml" afterDir="false" />
@@ -49,19 +46,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Docker.docker-compose-dev.yml: Compose Deployment">
     <configuration name="WebAPI" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/WebAPI/WebAPI.csproj" />
@@ -198,7 +195,8 @@
       <workItem from="1647119548690" duration="6059000" />
       <workItem from="1647419310425" duration="1228000" />
       <workItem from="1651861091790" duration="162000" />
-      <workItem from="1653865301430" duration="3604000" />
+      <workItem from="1653865301430" duration="4510000" />
+      <workItem from="1653898563046" duration="406000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1637692358527</created>
@@ -249,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647125027590</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="changed ports">
+      <created>1653869337502</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1653869337502</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,6 +287,7 @@
     <MESSAGE value="added documentation" />
     <MESSAGE value="added cors" />
     <MESSAGE value="implemented application" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented application" />
+    <MESSAGE value="changed ports" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed ports" />
   </component>
 </project>
