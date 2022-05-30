@@ -1,38 +1,7 @@
 version: '3.3'
-    
-services: 
-  webapp:
-    container_name: todo_webapp
-    build:
-      context: .
-      dockerfile: ./WebApp/Dockerfile
-    ports:
-      - "8081:80"
-    depends_on: 
-      - postgres
-    environment:
-      ASPNETCORE_ENVIRONMENT: ${ASPNETCORE_ENVIRONMENT:-Production}
-      DB_CONNECTION_STRING: "host=${DB_HOST:-todo_postgres};port=${DB_PORT:-5432};database=${DB_DATABASE:-todo};username=${DB_USERNAME:-todo};password=${DB_PASSWORD:-todo};"
-    networks: 
-      - todo_net
-    restart: unless-stopped  
+
+services:
   
-  webapi:
-    container_name: todo_webapi
-    build:
-      context: .
-      dockerfile: ./WebApi/Dockerfile
-    ports:
-      - "8082:80"
-    depends_on:
-      - postgres
-    environment:
-      ASPNETCORE_ENVIRONMENT: ${ASPNETCORE_ENVIRONMENT:-Production}
-      DB_CONNECTION_STRING: "host=${DB_HOST:-todo_postgres};port=${DB_PORT:-5432};database=${DB_DATABASE:-todo};username=${DB_USERNAME:-todo};password=${DB_PASSWORD:-todo};"
-    networks:
-      - todo_net
-    restart: unless-stopped
-    
   postgres:
     container_name: todo_postgres
     image: postgres:latest
@@ -49,10 +18,59 @@ services:
     networks:
       - todo_net
     restart: unless-stopped
-    
+  
+  webapi:
+    container_name: todo_webapi
+    build:
+      context: .
+      dockerfile: ./WebApi/Dockerfile
+    ports:
+      - "8001:80"
+    depends_on:
+      - postgres
+    environment:
+      ASPNETCORE_ENVIRONMENT: ${ASPNETCORE_ENVIRONMENT:-Development}
+      DB_CONNECTION_STRING: "host=${DB_HOST:-todo_postgres};port=${DB_PORT:-5432};database=${DB_DATABASE:-todo};username=${DB_USERNAME:-todo};password=${DB_PASSWORD:-todo};"
+    networks:
+      - todo_net
+    restart: unless-stopped
+  
+  webapp:
+    container_name: todo_webapp
+    build:
+      context: .
+      dockerfile: ./WebApp/Dockerfile
+    ports:
+      - "8002:80"
+    depends_on:
+      - postgres
+    environment:
+      ASPNETCORE_ENVIRONMENT: ${ASPNETCORE_ENVIRONMENT:-Development}
+      DB_CONNECTION_STRING: "host=${DB_HOST:-todo_postgres};port=${DB_PORT:-5432};database=${DB_DATABASE:-todo};username=${DB_USERNAME:-todo};password=${DB_PASSWORD:-todo};"
+    networks:
+      - todo_net
+    restart: unless-stopped
+  
+  
+  pgadmin:
+    container_name: todo_pgadmin
+    image: dpage/pgadmin4:latest
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
+    volumes:
+      - pgadmin:/var/lib/pgadmin
+    ports:
+      - "${PGADMIN_PORT:-5051}:80"
+    networks:
+      - todo_net
+    restart: unless-stopped
+
 networks:
   todo_net:
     driver: bridge
 
 volumes:
   postgres:
+  pgadmin:

@@ -13,35 +13,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="96f4d98a-269d-4d2a-92c8-e5d75e47c652" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Application/Application.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Commands/CreateTodoCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Commands/DeleteTodoCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Commands/UpdateTodoCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Handlers/CreateTodoCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Handlers/DeleteTodoCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Handlers/GetAllTodoQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Handlers/GetTodoByIdQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Handlers/UpdateTodoCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Queries/GetAllTodoQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Queries/GetTodoByIdQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Entities/BaseEntity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Repositories/IRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Repositories/IUnitOfWork.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/Repositories/Repository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/Repositories/UnitOfWork.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DockerCompose.NET/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DockerCompose.NET/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DockerCompose.NET.sln" beforeDir="false" afterPath="$PROJECT_DIR$/DockerCompose.NET.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Entities/BaseEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Entities/BaseEntity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Domain/Entities/Todo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Entities/Todo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Repositories/ITodoRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Repositories/ITodoRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/Extensions/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Extensions/DependencyInjection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/Repositories/TodoRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Repositories/TodoRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApi/Controllers/TodoController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/Controllers/TodoController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApi/WebApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/WebApi.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Pages/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Pages/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Pages/Index.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Pages/Index.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/WebApp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/WebApp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApi/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose-prod.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,21 +49,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="DatabaseDriversLRU" value="postgresql" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RunManager" selected="Docker.docker-compose-dev.yml: Compose Deployment">
     <configuration name="WebAPI" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/WebAPI/WebAPI.csproj" />
@@ -183,6 +159,7 @@
           <option name="sourceFilePath" value="WebApp/Dockerfile" />
         </settings>
       </deployment>
+      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isPublishEnabled="true" />
       <method v="2" />
     </configuration>
     <configuration name="docker-compose-dev.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
@@ -192,6 +169,7 @@
           <option name="sourceFilePath" value="docker-compose-dev.yml" />
         </settings>
       </deployment>
+      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isPublishEnabled="true" />
       <method v="2" />
     </configuration>
     <recent_temporary>
@@ -217,7 +195,10 @@
       <workItem from="1640419600841" duration="3315000" />
       <workItem from="1640441346727" duration="10494000" />
       <workItem from="1645822210614" duration="1994000" />
-      <workItem from="1647119548690" duration="5436000" />
+      <workItem from="1647119548690" duration="6059000" />
+      <workItem from="1647419310425" duration="1228000" />
+      <workItem from="1651861091790" duration="162000" />
+      <workItem from="1653865301430" duration="3604000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1637692358527</created>
@@ -261,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645823834237</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="implemented application">
+      <created>1647125027590</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1647125027590</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,6 +281,7 @@
     <MESSAGE value="added docker compose" />
     <MESSAGE value="added documentation" />
     <MESSAGE value="added cors" />
-    <option name="LAST_COMMIT_MESSAGE" value="added cors" />
+    <MESSAGE value="implemented application" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented application" />
   </component>
 </project>
