@@ -12,6 +12,6 @@ Example ASP.NET Core project with PostgresQL database demonstrating deployment t
 7. Clone the repo to your server
 8. `cd` into the project then: `source .env`
 9. Build and deploy the containers: `docker-compose --env-file .env up -d --build`
-10. Access the *todo_postgres* container: `docker-compose exec todo_postgres bash`
-11. Apply the database migration script: `psql -U "<your_db_username>" -d "<your_db_name>" -a -f scripts/migration.sql` or directly by: `docker-compose exec todo_postgres psql -U "${DB_USERNAME}" -d "${DB_DATABASE}" -a -f scripts/migration.sql`
+10. Access the *todo_postgres* container: `docker exec -it todo_postgres /bin/bash`
+11. Apply the database migration script: `psql -U "<your_db_username>" -d "<your_db_name>" -a -f scripts/migration.sql` or directly by: `docker exec -it todo_postgres psql -U "${DB_USERNAME}" -d "${DB_DATABASE}" -a -f scripts/migration.sql`
 12. Setup a reverse proxy in front of your services
